@@ -1,3 +1,4 @@
+// 声明全局变量以便函数内调用
 var timer = null,
     index = 0,
     pics = byId("banner").getElementsByTagName("div"),
