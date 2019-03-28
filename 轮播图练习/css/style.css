@@ -1,0 +1,78 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft YaHei";
+}
+
+ul{
+	list-style: none;
+}
+
+.main{
+	width: 1002px;
+	margin: 20px auto;
+}
+
+.nav{
+	width: 1000px;
+	height: 50px;
+	border: 1px dashed #f2f2f2;
+	border-radius: 5px;
+}
+
+.nav ul li{
+	width: 248px;
+	height: 48px;
+	float: left;
+	line-height: 48px;
+	text-align: center;
+	font-size: 22px;
+	color: #666;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.active{
+	background: #FFCC00;
+	font-weight: bolder;
+}
+
+.banner{
+	width: 1002px;
+	height: 500px;
+	position: relative;
+}
+
+.banner-slide{
+	width: 1002px; /*要插入背景图片，一定要给div设置高度，否则不显示*/
+	height: 500px;
+	position: absolute; /*相对banner进行定位，使图片层叠在一起*/
+	display: none;
+}
+
+.slide-active{
+	display: block;
+}
+
+.slide1{
+	background-image: url("../img/1.jpg");
+}
+
+.slide2{
+	background-image: url("../img/3.jpg");
+}
+
+.slide3{
+	background-image: url("../img/4.jpg");
+}
+
+.slide4{
+	background-image: url("../img/5.jpg");
+}
+
+
+
+
+
+
