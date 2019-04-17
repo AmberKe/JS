@@ -44,7 +44,7 @@ function showCart(){
 
 //轮播特效
 function slideImg(pics,dots){
-	var banner = byId("banner"),
+	var	bannerBox = byId("banner-box"),
 		next = byId("next"),
 		prev = byId("prev"),
 		mainMenu = byId("main-menu"),
@@ -60,11 +60,11 @@ function slideImg(pics,dots){
 		btn2 = byId("f2-right").getElementsByTagName("a");
 
 	//鼠标滑过清除定时器
-	banner.onmouseover = function(){
+	bannerBox.onmouseover = function(){
 		if(timer) clearInterval(timer); 
 	}
 	//鼠标移出开启定时器
-	banner.onmouseout = function(){
+	bannerBox.onmouseout = function(){
 		timer = setInterval(function(){
 			index ++;
 			if(index >= pics.length) {
@@ -75,7 +75,7 @@ function slideImg(pics,dots){
 	}
 
 	//进入网页时，轮播图自动切换
-	banner.onmouseout();
+	bannerBox.onmouseout();
 
 	//圆点切换图片
 	for(var d=0; d<pics.length; d++){
