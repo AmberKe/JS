@@ -51,7 +51,13 @@ function slideImg(pics,dots){
 		mainItems = mainMenu.getElementsByClassName("main-item"),
 		subMenu = byId("sub-menu"),
 		innerBox = subMenu.getElementsByClassName("inner-box"),
-		font = mainMenu.getElementsByTagName("a");
+		font = mainMenu.getElementsByTagName("a"),
+		f1 = byId("f1"),
+		f2 = byId("f2"),
+		box1 = f1.getElementsByClassName("content-box"),
+		box2 = f2.getElementsByClassName("content-box"),
+		btn1 = byId("f1-right").getElementsByTagName("a"),
+		btn2 = byId("f2-right").getElementsByTagName("a");
 
 	//鼠标滑过清除定时器
 	banner.onmouseover = function(){
@@ -129,6 +135,49 @@ function slideImg(pics,dots){
 		for(var n=0; n<mainItems.length; n++){
 			mainItems[n].style.background = "red";
 			font[n].style.color = "#fff";
+		}
+	}
+
+	//鼠标移到子菜单上时，顶层菜单背景改变
+	for(var i=0; i<innerBox.length; i++){
+		innerBox[i].setAttribute("box-index",i);
+		innerBox[i].onmouseover = function(){
+			var boxIdx = this.getAttribute("box-index");
+			for(var y=0; y<innerBox.length; y++){
+				mainItems[y].style.background = "red";
+				font[y].style.color = "#fff";
+			}
+			mainItems[boxIdx].style.background = "#fff";
+			font[boxIdx].style.color = "red";
+		}
+	}
+
+	//楼层区1F
+	for(var i=0; i<btn1.length; i++){
+		btn1[i].setAttribute("btn-index",i); 
+		btn1[i].onmouseover = function(){
+			var btnIdx = this.getAttribute("btn-index"); 
+			for(var n=0; n<btn1.length; n++){
+				btn1[n].className = "";
+				box1[n].className = "content-box"; 
+			}
+			btn1[btnIdx].className = "on";
+			box1[btnIdx].className = "content-box floorShow";
+		}
+	}
+
+	// 楼层区2F
+	for(var i=0; i<btn1.length; i++){
+		btn2[i].setAttribute("btn-index",i); 
+		btn2[i].onmouseover = function(){
+			btn1.className = "";
+			var btnIdx = this.getAttribute("btn-index"); 
+			for(var n=0; n<btn1.length; n++){
+				btn2[n].className = "";
+				box2[n].className = "content-box"; 
+			}
+			btn2[btnIdx].className = "on";
+			box2[btnIdx].className = "content-box floorShow";
 		}
 	}
 }

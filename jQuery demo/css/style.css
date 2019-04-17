@@ -567,6 +567,7 @@ nav ul .sub-layer{
 .content-box{
 	width: 100%;
 	float: left;
+	display: none;
 }
 .content-box dl{
 	width: 15%;
@@ -613,14 +614,11 @@ nav ul .sub-layer{
 .d1{
 	background: url("../素材/floor/6.jpg") no-repeat top center;
 }
-.f2 .s1, .f2 .s2{
+#f2 .s1, #f2 .s2{
 	background: url("../素材/floor/5.jpg") no-repeat top center;
 }
-.f1 .box1,.f1 .box3{
-	display: none;
-}
-.f2 .box2, .f2 .box3{
-	display: none;
+.floorShow{
+	display: block;
 }
 /*友情链接区*/
 .links{
