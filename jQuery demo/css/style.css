@@ -1,0 +1,669 @@
+/*img、input、textarea、select、object等属于行内替换元素，height/margin/padding/margin均可用。效果等于块元素*/
+
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-family: "Microsoft YaHei";
+}
+body{
+	min-width: 1200px;
+	height: 1000px;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+a:hover{
+	color: red;
+}
+ul{
+	list-style: none;
+}
+img{
+	border: 0;
+	vertical-align: middle;
+}
+.header{
+	width: 100%;
+	background: #f3f5f7;
+}
+/*top区域*/
+.top{
+	width: 1100px;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+	background: #f3f5f7;
+	border-bottom: 1px solid #CCC;
+}
+.top-left{
+	float: left;
+	margin-left: 15px;
+}
+.top-left .login{
+	color: red;
+}
+nav{
+	float: right;
+}
+nav .top-layer{ /*用css实现导航栏hover时出现边框，会导致元素宽高变化（屏幕闪动），请问这部分该怎么改？*/
+	float: left;
+	width: 100px;
+	margin-right: 8px;
+	border-left: 1px solid #f3f5f7;
+	border-right: 1px solid #f3f5f7;
+}
+nav ul{
+	display: inline-block;
+	position: relative;
+}
+nav ul .sub-layer{
+	width: 100px;
+	font-size: 14px;
+	line-height: 36px;
+	display: none;
+}
+nav ul:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+nav ul li a{
+	display: block;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+nav ul li:hover > .sub-layer{
+	display: block;
+	background: #fff;
+	border: 1px solid #CCC;
+	border-top: none;
+	z-index: 99;
+
+}
+.top-type:hover {
+	background: #fff;
+	border: 1px solid #CCC;
+	border-bottom: none;
+}
+.top-type li:hover a{
+	color: #000;
+	background: #f3f5f7;
+}
+nav ul .sub-layer{
+	position: absolute;
+	top: 100%;
+	margin-left: -1px; /*确保子菜单与主菜单对齐*/
+}
+
+/*logo区域,logo在左，搜索框居中，购物车在右*/
+
+/*这一区域的样式想将div变为行内块元素，再设置div之间的margin，但给第二个div设置宽高后（总宽度仍小于父容器宽度），三个div就不在同一行了，为何？*/
+.logoArea{
+	width: 1100px;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+}
+.logo{
+	width: 150px;
+	height: 50px;
+	padding-left: 15px;
+	padding-top: 25px;
+	cursor: pointer;
+}
+.search{
+	position: absolute;
+	width: 500px;
+	height: 40px;
+	top: 50%;
+	left: 50%;
+	margin-top: -20px;
+	margin-left: -250px;
+}
+.search .searchBox{
+	width: 400px;
+	height: 38px;
+	border: 1px solid #CCC;
+}
+.search .button{
+	width: 80px;
+	height: 39px; /*这里给button高度设为40px时，看起来跟输入框没有水平对齐，该怎么调整呢？*/
+	font-size: 14px;
+	color: #fff;
+	background: #000;
+	cursor: pointer;
+}
+.cart{
+	float: right;
+	width: 150px;
+	color: #fff;
+	background: red;
+	text-align: center;
+	padding: 10px 5px 10px 5px;
+	margin-right: 15px;
+	margin-top: -45px; /*搜索框使用绝对定位后脱离了文档流，购物车div紧跟在logo下方，右浮动后位置就掉在父元素下方了*/
+	cursor: pointer;
+}
+/*购物车下拉框；这段的html结构感觉特别繁琐，但没想出来简洁的方案，请问该怎么写？*/
+.cart-content{
+	position: absolute;
+	width: 275px;
+	right: 80px;
+	top: 72px;
+	right: 14px;
+	background: #fff;
+	border: 1px solid #CCC;
+	padding: 10px;
+	box-shadow: -2px 2px 1px #CCC; /*值为正时，阴影在右下，值为负时，阴影在左上*/
+	overflow-y: scroll;
+	z-index: 99;
+	display: none;
+}
+/*.cart:hover ~ .cart-content{
+	display: block;
+}
+.cart:hover{
+	background: #fff;
+	color: red;
+}
+*/
+.cart-title{
+	border-bottom: 1px solid #CCC;
+	padding: 10px;
+}
+.cart-items{
+	height: 340px;
+	overflow-y: scroll;
+}
+.cart-goods{
+	border-bottom: 1px solid #CCC;
+	padding: 8px;
+	font-size: 14px;
+}
+.cart-goods:hover{
+	background: #f3f5f7;
+}
+.cart-goods img, .cart-infos{
+	display: inline-block;
+	vertical-align: middle;
+}
+.cart-infos{
+	margin-left: 10px;
+	line-height: 25px;
+}
+.cart-infos a{
+	display: inline-block;
+	width: 180px;
+	cursor: pointer;
+}
+.cart-total{
+	padding: 8px;
+	font-size: 14px;
+}
+.cart-total .cart-button{
+	width: 80px;
+	background: red;
+	padding: 8px;
+	border-radius: 3px;
+	color: #fff;
+	margin-left: 33px;
+	cursor: pointer;
+}
+
+/*导航区*/
+.nav-left{
+	width: 100%;
+	height: 50px;
+	background: #07111b;
+	color: #fff;
+}
+.nav-left ul{
+	margin-left: 29%;
+}
+.nav-left ul li{
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	padding-right: 50px;
+	cursor: pointer;
+}
+.nav-left ul li:hover{
+	color: red;
+}
+
+/*右导航区*/
+.nav-right{
+	background: #b7bbbf;
+	width: 40px;
+}
+.nav-right img{
+	width: 25px;
+	height: 25px;
+	margin: 6px;
+}
+.nav-right{
+	position: fixed;
+	right: 0;
+	top: 50%;
+	margin-top: -99px;
+}
+.nav-bar>li{
+	height: 40px;
+	border-bottom: 1px solid #fff;
+	cursor: pointer;
+	position: relative;
+}
+.nav-bar li:hover{
+	background: #71777d;
+}
+.nav-items{
+	position: absolute; /*这里给元素设置z-index为何不起作用？如何将其显示在最上层呢？*/
+	float: right;
+	top: 0;
+	right: 40px;
+}
+.nav-items{
+	display: none;
+}
+.nav-items li{
+	width: 60px;
+	height: 40px;
+	line-height: 38px;
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+	background: #71777d;
+	border-bottom: 1px solid #fff;
+}
+.nav-bar li:hover > .nav-items{
+	display: block;
+}
+
+/*banner区域*/
+.banner{
+	width: 1100px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+}
+/*主菜单*/
+.menu{
+	width: 200px;
+	height: 560px;
+	background: rgba(255,0,0,0.8);
+	position: absolute;
+	bottom: 0;
+	z-index: 999;
+}
+.main-menu{
+	width: 200px;
+	height: 560px;
+	color: #fff;
+}
+.menu-title{
+	margin: 20px 15px 13px 15px;
+}
+.main-item{
+	width: 200px;
+	font-size: 14px;
+	position: relative;
+}
+/*.main-item a:hover{
+	background: #fff;
+	color: red;
+}
+*//*全局设置了a:hover{color:red;}这里为什么不起作用需要重写呢？*/
+
+.main-item a{
+	display: inline-block;
+	box-sizing: border-box;
+	width: 200px;
+	color: #fff;
+	padding: 8px 0 8px 12px;
+}
+.main-item span{
+	position: absolute;
+	right: 10px;
+}
+/*鼠标滑过主菜单，主菜单和子菜单之间没有border是怎么做到的？*/
+/*子菜单*/
+.sub-menu .inner-box{
+	width: 653px;
+	height: auto;
+	font-size: 14px;
+	border: 1px solid #CCC;
+	background: #fff;
+	position: absolute;
+	top: 55px;
+	left: 200px;
+}
+.sub-item{
+	width: 600px;
+	margin: 30px 30px;
+}
+.bold{
+	font-weight: bold;
+	display: inline-block;
+	width: 78px;
+	text-align: right;
+	vertical-align: top
+}
+.sub-link{
+	display: inline-block;
+	width: 500px;
+}
+.sub-link a{
+	margin-right: 8px;
+}
+.hide{
+	display: none;
+}
+/*轮播图*/
+.slide{
+	width: 650px;
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+	left: 200px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.slide-pics{
+	width: 650px;
+	height: 500px;
+	background-repeat: no-repeat;
+	background-size: 650px 500px;
+	position: absolute;
+	display: none;
+}
+.slide-active{
+	display: block;
+}
+.pic1{
+	background-image: url("../素材/focus-carousel/1.png");
+}
+.pic2{
+	background-image: url("../素材/focus-carousel/2.jpg");
+}
+.pic3{
+	background-image: url("../素材/focus-carousel/3.jpg");
+}
+.pic4{
+	background-image: url("../素材/focus-carousel/4.jpg");
+}
+.pic5{
+	background-image: url("../素材/focus-carousel/5.jpg");
+}
+.slide-button{
+	position: absolute;
+	width: 40px;
+	height: 80px;
+	left: 205px;
+	top: 50%;
+	margin-top: -40px;
+}
+.slide-button:hover{ 
+	background-color: #333;
+	opacity: 0.8;
+	filter: alpha(opactiy=80);
+}
+.prev{
+	background: url("../素材/focus-carousel/pre2.png") no-repeat center; 
+}
+.next{
+	background: url("../素材/focus-carousel/pre.png") no-repeat center; 
+	left: auto;
+	right: 245px;
+}
+.dots{
+	position: absolute;
+	width: 130px;
+	left: 50%;
+	bottom: 10px;
+	margin-left: -65px;
+}
+.dots span{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	line-height: 12px;
+	border-radius: 50%;
+	margin-left: 8px;
+	background: rgba(7,17,27,0.4);
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.8) inset; 
+	cursor: pointer;
+}
+.dots .active{
+	box-shadow: 0 0 0 2px rgba(7,17,27,0.4) inset;
+	background: #fff;
+}
+/*生活服务*/
+.service{
+	width: 240px;
+	height: 500px;
+	font-size: 14px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.news{
+	width: 238px;
+	height: 160px;
+	border: 1px solid #CCC;
+	border-bottom: none;
+	padding-bottom: 10px;
+}
+.news-title{
+	width: 220px;
+	margin: 0 auto;
+	padding: 8px;
+	color: red;
+}
+.news-title a{
+	float: right;
+	color: #A9A9A9;
+}
+.news ul li a{
+	display: inline-block;
+	font-size: 12px;
+	padding: 4px 10px;
+}
+.lifeService{
+	width: 240px;
+	text-align: center;
+	font-size: 14px;
+	border-collapse: collapse;
+}
+.lifeService tr{
+	border-left: none;
+}
+.lifeService th{
+	width: 25%;
+	border: 1px solid #CCC;
+	font-weight: normal;
+	color: #71777d;
+	cursor: pointer;
+}
+.lifeService img{
+	width: 28px;
+	height: 28px;
+	margin-top: 8px;
+}
+.lifeService p{
+	margin-bottom: 5px;
+}
+.ads{
+	width: 238px;
+	height: 141px;
+	border: 1px solid #CCC;
+	border-top: none;
+	background-image: url("../素材/focus-carousel/1.jpg");
+	background-size: 238px 140px;
+	cursor: pointer;
+}
+
+/*楼层区*/
+.floor{
+	width: 1100px;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+	zoom: 1;
+}
+.floor-box{
+	width: 100%;
+	height: auto;
+	clear: both;
+}
+.floor-nav{
+	width: 100%;
+	height: 50px;
+	border-bottom: 2px solid red;
+}
+.circle{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	background: #000;
+	color: #fff;
+	text-align: center;
+	border-radius: 50%;
+}
+.floor-left{
+	width: 550px;
+	height: 50px;
+	line-height: 50px;
+	display: inline-block;
+}
+.floor-right{
+	display: inline-block;
+	width: 530px;
+	height: 50px;
+	line-height: 50px;
+	text-align: right;
+}
+.floor-right a{
+	position: relative;
+}
+.floor-right .on:after{
+	position: absolute;
+	display: block;
+	content: " ";
+	width: 14px;
+	height: 8px;
+	background: url("../素材/floor-arrow.png") no-repeat; 
+	top: 30px;
+	left: 50%;
+	margin-left: -7px;
+	z-index: 99;
+}
+.floor-content{
+	width: 100%;
+	height: auto;
+}
+.content-box{
+	width: 100%;
+	float: left;
+}
+.content-box dl{
+	width: 15%;
+	height: 207px;
+	float: left;
+	margin: 8px;
+	font-size: 14px;
+	text-align: center;
+	border: 1px solid #fff;
+}
+.content-box dl:hover{
+	border: 1px solid #CCC;
+}
+.content-box dt{
+	margin-top: 135px;
+	margin-bottom: 10px;
+	height: 40px;
+}
+.content-box dd{
+	width: 100%;
+	color: red;
+}
+.s1, .s2{
+	background: url("../素材/floor/1.png") no-repeat top center;
+}
+.s3, .s4{
+	background: url("../素材/floor/1.jpg") no-repeat top center;
+}
+.s5, .s6{
+	background: url("../素材/floor/1.png") no-repeat top center;
+}
+.s7, .s8{
+	background: url("../素材/floor/2.jpg") no-repeat top center;
+}
+.s9, .s10{
+	background: url("../素材/floor/1.png") no-repeat top center;
+}
+.s11, .s12{
+	background: url("../素材/floor/3.jpg") no-repeat top center;
+}
+.t1{
+	background: url("../素材/floor/4.jpg") no-repeat top center;
+}
+.d1{
+	background: url("../素材/floor/6.jpg") no-repeat top center;
+}
+.f2 .s1, .f2 .s2{
+	background: url("../素材/floor/5.jpg") no-repeat top center;
+}
+.f1 .box1,.f1 .box3{
+	display: none;
+}
+.f2 .box2, .f2 .box3{
+	display: none;
+}
+/*友情链接区*/
+.links{
+	width: 1100px;
+	height: auto;
+	margin: 0 auto;
+	border-top: 1px solid #CCC;
+	margin-top: 20px;
+	overflow: hidden;
+	zoom: 1;
+}
+.links dl{
+	width: 25%;
+	height: auto;
+	float: left;
+	margin-bottom: 20px;
+}
+.links dt{
+	margin: 20px;
+	margin-bottom: 10px;
+}
+.links dd{
+	font-size: 14px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+.links dd a, .footer a,p{
+	color: #A9A9A9;
+}
+.links dd a:hover{
+	color: red;
+}
+
+/*页脚*/
+.footer{
+	width: 100%;
+	height: auto;
+	background: #f3f5f7;
+	font-size: 14px;
+	text-align: center;
+	padding: 20px;
+	line-height: 25px;
+}
+.footer a:hover{
+	color: #71777d;
+}

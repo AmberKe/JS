@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>安伯伯的jQuery作业</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<div class="container">	
+		<div class="header">
+			<!-- 这是顶部 -->
+			<div class="top" id="top">
+				<div class="top-left">
+					<a href="#" class="login">亲，请登录&nbsp;</a>
+					<a href="#">免费注册&nbsp;</a>
+					<a href="#">手机逛慕淘</a>
+				</div>
+				<nav>
+					<ul>
+						<li class="top-layer top-type"><a href="#">我的慕淘<img src="素材/icon/22.png"></a>
+							<ul class="sub-layer">
+								<li><a href="#">已买到的宝贝</a></li>
+								<li><a href="#">我的足迹</a></li>
+							</ul>
+						</li>
+						<li class="top-layer top-type type2"><a href="#">收藏夹<img src="素材/icon/22.png"></a>
+							<ul class="sub-layer type2">
+								<li><a href="#">收藏的宝贝</a></li>
+								<li><a href="#">收藏的店铺</a></li>
+							</ul>
+						</li>
+						<li class="top-layer"><a href="#">商品分类</a></li>
+						<li class="top-layer top-type"><a href="#">卖家中心<img src="素材/icon/22.png"></a>
+							<ul class="sub-layer">
+								<li><a href="#">免费开店</a></li>
+								<li><a href="#">已卖出的宝贝</a></li>
+								<li><a href="#">出售中的宝贝</a></li>
+								<li><a href="#">卖家服务市场</a></li>
+								<li><a href="#">卖家培训中心</a></li>
+								<li><a href="#">体验中心</a></li>
+							</ul>
+						</li>
+						<li class="top-layer top-type"><a href="#">联系客服<img src="素材/icon/22.png"></a>
+							<ul class="sub-layer">
+								<li><a href="#">消费者客服</a></li>
+								<li><a href="#">卖家客服</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!-- 这是logo区 -->
+			<div class="logoArea">
+				<div class="logo">
+					<img src="素材/logo.png">
+				</div>
+				<div class="search">
+					<input type="text" class="searchBox" name="searchBox" placeholder=" 灵魂美食一元抢"><input type="button" class="button" name="button" value="搜索">
+				</div>
+				<div class="cart" id="cart">
+					<img src="素材/icon/26.png">&nbsp;&nbsp;购物车&nbsp;&nbsp;|&nbsp;&nbsp;<span>0</span>&nbsp;<img src="素材/icon/23.png">
+				</div> 
+				<div class="cart-content" id="cart-content">
+					<div class="cart-title">最新加入的商品</div>
+					<div class="cart-items">
+						<div class="cart-goods">
+							<img src="素材/cart/1.png">
+							<div class="cart-infos">
+								<a>adidas 阿迪达斯 训练 男子</a><span>X</span><p>￥335 x 1</p>
+							</div>
+						</div>
+						<div class="cart-goods">
+							<img src="素材/cart/2.png">
+							<div class="cart-infos">
+								<a>玉兰油多效修护三部曲套装</a><span>X</span><p>￥199 x 2</p>
+							</div>
+						</div>
+						<div class="cart-goods">
+							<img src="素材/cart/3.png">
+							<div class="cart-infos">
+								<a>Apple iPhone 7(A1660)</a><span>X</span><p>￥6188 x 1</p>
+							</div>
+						</div>
+						<div class="cart-goods">
+							<img src="素材/cart/4.png">
+							<div class="cart-infos">
+								<a>飞利浦面条机 HR2356/31</a><span>X</span><p>￥659 x 4</p>
+							</div>
+						</div>
+						<div class="cart-goods">
+							<img src="素材/cart/5.png">
+							<div class="cart-infos">
+								<a>罗技G29 力反馈游戏方向</a><span>X</span><p>￥2999 x 1</p>
+							</div>
+						</div>
+						<div class="cart-goods">
+							<img src="素材/cart/1.png">
+							<div class="cart-infos">
+								<a>adidas 阿迪达斯 训练 男子</a><span>X</span><p>￥335 x 1</p>
+							</div>
+						</div>
+						<div class="cart-goods">
+							<img src="素材/cart/2.png">
+							<div class="cart-infos">
+								<a>玉兰油多效修护三部曲套装</a><span>X</span><p>￥199 x 2</p>
+							</div>
+						</div>
+						<div class="cart-goods">
+							<img src="素材/cart/3.png">
+							<div class="cart-infos">
+								<a>Apple iPhone 7(A1660)</a><span>X</span><p>￥6188 x 1</p>
+							</div>
+						</div>
+						<div class="cart-goods">
+							<img src="素材/cart/4.png">
+							<div class="cart-infos">
+								<a>飞利浦面条机 HR2356/31</a><span>X</span><p>￥659 x 4</p>
+							</div>
+						</div>
+						<div class="cart-goods">
+							<img src="素材/cart/5.png">
+							<div class="cart-infos">
+								<a>罗技G29 力反馈游戏方向</a><span>X</span><p>￥2999 x 1</p>
+							</div>
+						</div>
+					</div>
+					<div class="cart-total">
+						<span>共18件商品 共计￥0.00</span><input class="cart-button" type="button" name="button" value="去购物车">
+					</div>
+				</div>
+			</div>	
+		</div>
+		<!-- 这是导航 -->
+		<div class="nav-left">
+			<ul>
+				<li>数码城</li>
+				<li>天黑黑</li>
+				<li>团购</li>
+				<li>发现</li>
+				<li>二手特价</li>
+				<li>名品汇</li>
+			</ul>
+		</div>
+		<!-- 这是右导航 -->
+		<div class="nav-right">
+			<ul class="nav-bar">
+				<li><a href="#"><img src="素材/icon/13.png"></a>
+					<ul class="nav-items">
+						<li>会员</li>
+					</ul>
+				</li>
+				<li><a href="#"><img src="素材/icon/14.png"></a>
+					<ul class="nav-items">
+						<li>购物车</li>
+					</ul>
+				</li>
+				<li><a href="#"><img src="素材/icon/15.png"></a>
+					<ul class="nav-items">
+						<li>我的关注</li>
+					</ul>
+				</li>
+				<li><a href="#"><img src="素材/icon/16.png"></a>
+					<ul class="nav-items">
+						<li>我的消息</li>
+					</ul>
+				</li>
+				<li><a href="#top"><img src="素材/icon/17.png"></a>
+					<ul class="nav-items">
+						<li>顶部</li>
+					</ul>
+				</li>
+			</ul> 
+		</div>
+		<!-- 这是banner区 -->
+		<div class="banner" id="banner">
+			<div class="menu">
+				<div class="main-menu" id="main-menu">
+					<div class="menu-title"><img src="素材/icon/18.png">&nbsp;&nbsp;商品分类</div>
+					<div class="main-item">
+		    			<a href="">家用电器<span>></span></a>
+		    		</div>
+		    		<div class="main-item">
+		    			<a href="">手机、运营商、数码<span>></span></a>
+		    		</div>
+					<div class="main-item">
+		    			<a href="">电脑、办公<span>></span></a>
+		    		</div>
+					<div class="main-item">
+		    			<a href="">家居、家具、家装、厨具<span>></span></a>
+		    		</div>
+					<div class="main-item">
+		    			<a href="">男装、女装、童装、内衣<span>></span></a>
+		    		</div>	
+					<div class="main-item">
+		    			<a href="">化妆、清洁、宠物<span>></span></a>
+		    		</div>
+					<div class="main-item">
+		    			<a href="">运动户外、钟表<span>></span></a>
+		    		</div>
+					<div class="main-item">
+		    			<a href="">汽车、汽车用品<span>></span></a>
+		    		</div>	
+					<div class="main-item">
+		    			<a href="">母婴、玩具乐器<span>></span></a>
+		    		</div>
+					<div class="main-item">
+		    			<a href="">食品、酒类、生鲜、特产<span>></span></a>
+		    		</div>
+					<div class="main-item">
+		    			<a href="">医药保健<span>></span></a>
+		    		</div>
+					<div class="main-item">
+		    			<a href="">图书、音像、电子书<span>></span></a>
+		    		</div>
+					<div class="main-item">
+		    			<a href="">彩票、旅行、充值、票务<span>></span></a>
+		    		</div>	    			    			    			    			
+					<div class="main-item">
+		    			<a href="">理财、众筹、白条、保险<span>></span></a>
+		    		</div>
+		    	</div>
+		    	<div class="sub-menu hide" id="sub-menu">
+		    		<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">电器&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">冰箱&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">洗衣机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">电脑&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">微波炉&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">开水壶&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">吹风机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">缝纫机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">手机通讯&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">运营商&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">手机配件&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">摄影摄像&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">数码配件&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">影音娱乐&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">智能设备&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">电子教育&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">联想&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">苹果&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">显示屏&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">戴尔&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">华硕&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">打印机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">照相机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">索尼&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">复读机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">运营商&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">MP3&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">乐视&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">vivo&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">oppo&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">智能&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">电子教育&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">电器&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">冰箱&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">洗衣机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">电脑&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">微波炉&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">开水壶&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">吹风机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">缝纫机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">手机通讯&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">运营商&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">手机配件&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">摄影摄像&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">数码配件&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">影音娱乐&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">智能设备&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">电子教育&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">联想&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">苹果&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">显示屏&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">戴尔&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">华硕&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">打印机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">照相机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">索尼&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">复读机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">运营商&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">MP3&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">乐视&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">vivo&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">oppo&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">智能&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">电子教育&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">电器&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">冰箱&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">洗衣机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">电脑&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">微波炉&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">开水壶&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">吹风机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">缝纫机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">手机通讯&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">运营商&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">手机配件&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">摄影摄像&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">数码配件&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">影音娱乐&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">智能设备&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">电子教育&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">联想&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">苹果&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">显示屏&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">戴尔&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">华硕&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">打印机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">照相机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">索尼&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">复读机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">运营商&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">MP3&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">乐视&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">vivo&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">oppo&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">智能&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">电子教育&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">电器&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">冰箱&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">洗衣机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">电脑&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">微波炉&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">开水壶&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">吹风机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">缝纫机&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class="inner-box">
+			    		<div class="sub-item">
+			    			<div class="bold">手机通讯&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机</a>
+			    				<a href="#">对讲机</a>
+			    				<a href="#">以旧换新</a>
+			    				<a href="#">手机维修</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">运营商&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">充话费/流量</a>
+			    				<a href="#">170选号</a>
+			    				<a href="#">合约机</a>
+			    				<a href="#">办套餐</a>
+			    				<a href="#">选号码</a>
+			    				<a href="#">固话宽带</a>
+			    				<a href="#">京东通讯</a>
+			    				<a href="#">中国移动</a>
+			    				<a href="#">中国联通</a>
+			    				<a href="#">中国电信</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">手机配件&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">手机壳</a>
+			    				<a href="#">贴膜</a>
+			    				<a href="#">手机存储卡</a>
+			    				<a href="#">数据线</a>
+			    				<a href="#">充电器</a>
+			    				<a href="#">手机耳机</a>
+			    				<a href="#">创意配件</a>
+			    				<a href="#">手机饰品</a>
+			    				<a href="#">手机电池</a>
+			    				<a href="#">苹果周边</a>
+			    				<a href="#">移动电源</a>
+			    				<a href="#">蓝牙耳机</a>
+			    				<a href="#">手机支架</a>
+			    				<a href="#">车载配件</a>
+			    				<a href="#">拍照配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">摄影摄像&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">数码相机</a>
+			    				<a href="#">单电/微单相机</a>
+			    				<a href="#">单反相机</a>
+			    				<a href="#">拍立得</a>
+			    				<a href="#">运动相机</a>
+			    				<a href="#">摄像机</a>
+			    				<a href="#">镜头</a>
+			    				<a href="#">户外器材</a>
+			    				<a href="#">影棚器材</a>
+			    				<a href="#">冲印服务</a>
+			    				<a href="#">数码相框</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">数码配件&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">存储卡</a>
+			    				<a href="#">三脚架/云台</a>
+			    				<a href="#">相机包</a>
+			    				<a href="#">滤镜</a>
+			    				<a href="#">闪光灯/手柄</a>
+			    				<a href="#">相机清洁/贴膜</a>
+			    				<a href="#">机身附件</a>
+			    				<a href="#">镜头附件</a>
+								<a href="#">读卡器</a>
+			    				<a href="#">支架</a>
+			    				<a href="#">电池/充电器</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">影音娱乐&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">耳机/耳塞</a>
+			    				<a href="#">音箱/音响</a>
+			    				<a href="#">便携/无线音箱</a>
+			    				<a href="#">收音机</a>
+			    				<a href="#">麦克风</a>
+			    				<a href="#">MP3/MP4</a>
+			    				<a href="#">专业音频</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">智能设备&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">智能手环</a>
+			    				<a href="#">智能手表</a>
+			    				<a href="#">智能眼镜</a>
+			    				<a href="#">智能机器人</a>
+			    				<a href="#">运动跟踪器</a>
+			    				<a href="#">健康监测</a>
+			    				<a href="#">智能配饰</a>
+			    				<a href="#">智能家居</a>
+			    				<a href="#">体感车</a>
+			    				<a href="#">无人机</a>
+			    				<a href="#">其他配件</a>
+			    			</div>
+			    		</div>
+			    		<div class="sub-item">
+			    			<div class="bold">电子教育&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+			    			<div class="sub-link">
+			    				<a href="#">学生平板</a>
+			    				<a href="#">点读机/笔</a>
+			    				<a href="#">早教益智</a>
+			    				<a href="#">录音笔</a>
+			    				<a href="#">电子书</a>
+			    				<a href="#">电子词典</a>
+			    				<a href="#">复读机</a>
+			    			</div>
+			    		</div>
+			    	</div>
+		    	</div>
+			</div>
+			<div class="slide" id="slide">
+				<a href="#">
+					<div class="slide-pics slide-active pic1"></div>
+				</a>
+				<a href="#">
+					<div class="slide-pics pic2"></div>
+				</a>
+				<a href="#">
+					<div class="slide-pics pic3"></div>
+				</a>
+				<a href="#">
+					<div class="slide-pics pic4"></div>
+				</a>
+				<a href="#">
+					<div class="slide-pics pic5"></div>
+				</a>	
+			</div>
+			<a href="javascript:void(0)" class="slide-button prev" id="prev"></a>
+		    <a href="javascript:void(0)" class="slide-button next" id="next"></a>
+		   	<div class="dots" id="dots">
+		 		<span class="active"></span>
+		    	<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+	    	</div>				
+			<div class="service">
+				<div class="news">
+					<div class="news-title"><strong>慕快报</strong><a href="#">更多 ></a></div>
+					<ul>
+						<li><a href="#"><strong>[特惠]</strong> 精选图书每满150减50</a></li>
+						<li><a href="#"><strong>[公告]</strong> 因广州图书馆仓搬仓升级配送延迟</a></li>
+						<li><a href="#"><strong>[特惠]</strong> 爆款手机12期免息 抽奖赢电视</a></li>
+						<li><a href="#"><strong>[公告]</strong> 广东、福建受台风影响配送延迟</a></li>
+						<li><a href="#"><strong>[特惠]</strong> 大闸蟹领券满399减180</a></li>
+					</ul>
+				</div>
+				<table class="lifeService">
+					<tr>
+						<th><img src="素材/icon/1.png"><p>话费</p></th>
+						<th><img src="素材/icon/2.png"><p>机票</p></th>
+						<th><img src="素材/icon/3.png"><p>电影票</p></th>
+						<th><img src="素材/icon/4.png"><p>游戏</p></th>
+					</tr>
+					<tr>
+						<th><img src="素材/icon/5.png"><p>彩票</p></th>
+						<th><img src="素材/icon/6.png"><p>加油卡</p></th>
+						<th><img src="素材/icon/7.png"><p>酒店</p></th>
+						<th><img src="素材/icon/8.png"><p>火车票</p></th>
+					</tr>
+					<tr>
+						<th><img src="素材/icon/9.png"><p>众筹</p></th>
+						<th><img src="素材/icon/10.png"><p>理财</p></th>
+						<th><img src="素材/icon/11.png"><p>礼品卡</p></th>
+						<th><img src="素材/icon/12.png"><p>白条</p></th>
+					</tr>
+				</table> 
+				<div class="ads"></div>
+			</div>
+		</div>
+		<!-- 这是楼层区 -->
+		<div class="floor">
+			<div class="floor-box f1">
+				<div class="floor-nav">
+					<div class="floor-left">
+						<span class="circle">1F</span><span class="bold">服装鞋包</span>
+					</div>
+					<div class="floor-right">
+						<a href="#" class="on">大牌</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">男装</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">女装</a>&nbsp;&nbsp;
+					</div>
+				</div>
+				<div class="floor-content">
+					<div class="content-box box1">
+						<dl class="s1">
+							<dt><a href="#">1匡威男棒球开衫外套</a></dt>
+							<dd>￥479</dd>
+						</dl>
+						<dl class="s2">
+							<dt><a href="#">adidas 阿迪达斯 训练 男子</a></dt>
+							<dd>￥335</dd>
+						</dl>
+						<dl class="s3">
+							<dt><a href="#">必迈BMAI-体积跑步短袖T恤</a></dt>
+							<dd>￥159</dd>
+						</dl>
+						<dl class="s4">
+							<dt><a href="#">NBA袜子半毛圈运动高帮棉袜</a></dt>
+							<dd>￥65</dd>
+						</dl>
+						<dl class="s5">
+							<dt><a href="#">特步官方运动帽男女帽子2016</a></dt>
+							<dd>￥69</dd>
+						</dl>
+						<dl class="s6">
+							<dt><a href="#">KELME足球训练防寒防风手套</a></dt>
+							<dd>￥4999</dd>
+						</dl>
+						<dl class="s7">
+							<dt><a href="#">极地户外三合一冲锋衣</a></dt>
+							<dd>￥289</dd>
+						</dl>
+						<dl class="s8">
+							<dt><a href="#">探路者户外男士徒步鞋</a></dt>
+							<dd>￥369</dd>
+						</dl>
+						<dl class="s9">
+							<dt><a href="#">羽绒服2015秋冬新款轻薄男士</a></dt>
+							<dd>￥399</dd>
+						</dl>
+						<dl class="s10">
+							<dt><a href="#">溯溪鞋涉水鞋户外鞋</a></dt>
+							<dd>￥689</dd>
+						</dl>
+						<dl class="s11">
+							<dt><a href="#">旅行背包多功能双肩背包</a></dt>
+							<dd>￥269</dd>
+						</dl>
+						<dl class="s12">
+							<dt><a href="#">户外旅行双肩背包QS0099</a></dt>
+							<dd>￥99</dd>
+						</dl>
+					</div>
+					<div class="content-box box2">
+						<dl class="t1">
+							<dt><a href="#">法式夏季清新印花连衣裙</a></dt>
+							<dd>￥399</dd>
+						</dl>
+					</div>
+					<div class="content-box box3">
+						<dl class="d1">
+							<dt><a href="#">黑白条纹吸汗透气夏季polo衫</a></dt>
+							<dd>￥129</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="floor-box f2">
+				<div class="floor-nav">
+					<div class="floor-left">
+						<span class="circle">2F</span><span class="bold">个护美妆</span>
+					</div>
+					<div class="floor-right">
+						<a href="#" class="on">热门</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">国际大牌</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">国际名品</a>&nbsp;&nbsp;
+					</div>
+				</div>
+				<div class="floor-content">
+					<div class="content-box box1">
+						<dl class="s1">
+							<dt><a href="#">1匡威男棒球开衫外套</a></dt>
+							<dd>￥479</dd>
+						</dl>
+						<dl class="s2">
+							<dt><a href="#">adidas 阿迪达斯 训练 男子</a></dt>
+							<dd>￥335</dd>
+						</dl>
+						<dl class="s3">
+							<dt><a href="#">必迈BMAI-体积跑步短袖T恤</a></dt>
+							<dd>￥159</dd>
+						</dl>
+						<dl class="s4">
+							<dt><a href="#">NBA袜子半毛圈运动高帮棉袜</a></dt>
+							<dd>￥65</dd>
+						</dl>
+						<dl class="s5">
+							<dt><a href="#">特步官方运动帽男女帽子2016</a></dt>
+							<dd>￥69</dd>
+						</dl>
+						<dl class="s6">
+							<dt><a href="#">KELME足球训练防寒防风手套</a></dt>
+							<dd>￥4999</dd>
+						</dl>
+						<dl class="s7">
+							<dt><a href="#">极地户外三合一冲锋衣</a></dt>
+							<dd>￥289</dd>
+						</dl>
+						<dl class="s8">
+							<dt><a href="#">探路者户外男士徒步鞋</a></dt>
+							<dd>￥369</dd>
+						</dl>
+						<dl class="s9">
+							<dt><a href="#">羽绒服2015秋冬新款轻薄男士</a></dt>
+							<dd>￥399</dd>
+						</dl>
+						<dl class="s10">
+							<dt><a href="#">溯溪鞋涉水鞋户外鞋</a></dt>
+							<dd>￥689</dd>
+						</dl>
+						<dl class="s11">
+							<dt><a href="#">旅行背包多功能双肩背包</a></dt>
+							<dd>￥269</dd>
+						</dl>
+						<dl class="s12">
+							<dt><a href="#">户外旅行双肩背包QS0099</a></dt>
+							<dd>￥99</dd>
+						</dl>
+					</div>
+					<div class="content-box box2">
+						<dl class="t1">
+							<dt><a href="#">法式夏季清新印花连衣裙</a></dt>
+							<dd>￥399</dd>
+						</dl>
+					</div>
+					<div class="content-box box3">
+						<dl class="d1">
+							<dt><a href="#">黑白条纹吸汗透气夏季polo衫</a></dt>
+							<dd>￥129</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 这是友情链接 -->
+		<div class="links">
+			<dl>
+				<dt>消费者保障</dt>
+				<dd>
+					<a href="#">保障范围</a>&nbsp;&nbsp;<a href="#">退货退款流程</a>&nbsp;&nbsp;<a href="#">服务中心</a>&nbsp;&nbsp;<a href="#">更多特色服务</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>新手上路</dt>
+				<dd>
+					<a href="#">新手专区</a>&nbsp;&nbsp;<a href="#">温馨提示</a>&nbsp;&nbsp;<a href="#">交易安全</a>&nbsp;&nbsp;<a href="#">24小时在线帮助</a>&nbsp;&nbsp;<a href="#">免费开店</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>付款方式</dt>
+				<dd>
+					<a href="#">快捷支付</a>&nbsp;&nbsp;<a href="#">信用卡</a>&nbsp;&nbsp;<a href="#">余额宝</a>&nbsp;&nbsp;<a href="#">随便花阿</a>&nbsp;&nbsp;<a href="#">货到付款</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>慕淘特色</dt>
+				<dd>
+					<a href="#">手机慕淘</a>&nbsp;&nbsp;<a href="#">慕淘营</a>&nbsp;&nbsp;<a href="#">大众评审</a>&nbsp;&nbsp;<a href="#">价格指南</a>
+				</dd>
+			</dl>
+		</div>
+		<!-- 这是页脚 -->
+		<div class="footer">
+			<a href="#">关于慕淘</a>&nbsp;&nbsp;<a href="#">合作伙伴</a>&nbsp;&nbsp;<a href="#">营销中心</a>&nbsp;&nbsp;<a href="#">廉正举报</a>&nbsp;&nbsp;<a href="#">联系客服</a>&nbsp;&nbsp;<a href="#">开放平台</a>&nbsp;&nbsp;<a href="#">诚征英才</a>&nbsp;&nbsp;<a href="#">联系我们</a>&nbsp;&nbsp;<a href="#">网站地图</a>&nbsp;&nbsp;<a href="#">法律声明</a>&nbsp;&nbsp;<a href="#">知识产权</a>
+			<p>© 2016 imooc.com All Rights Reserved</p>
+		</div>
+	</div>
+</body>
+</html>
