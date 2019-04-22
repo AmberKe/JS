@@ -6,7 +6,8 @@ function byId(n){
 	return typeof(n) === "string"?document.getElementById(n):n
 }
 
-//购物车：这部分效果能用纯css实现吗？自己写只能实现一部分，且代码量增加，怎样的写法比较合理优化？
+//购物车
+//问题一：这部分效果能用纯css实现吗？自己写只能实现一部分，且代码量比现在的写法更多，怎样的写法比较合理优化？另外，如果在纯css和纯js两种方法各自都能实现效果的情况下，优先选择哪一种性能上比较好呢？
 function showCart(){
 	var cart = byId("cart"),
 	    cartImg1 = cart.getElementsByTagName("img")[0],
@@ -52,8 +53,6 @@ function slideImg(pics,dots){
 		subMenu = byId("sub-menu"),
 		innerBox = subMenu.getElementsByClassName("inner-box"),
 		font = mainMenu.getElementsByTagName("a"),
-		f1 = byId("f1"),
-		f2 = byId("f2"),
 		box1 = f1.getElementsByClassName("content-box"),
 		box2 = f2.getElementsByClassName("content-box"),
 		btn1 = byId("f1-right").getElementsByTagName("a"),
@@ -170,7 +169,6 @@ function slideImg(pics,dots){
 	for(var i=0; i<btn1.length; i++){
 		btn2[i].setAttribute("btn-index",i); 
 		btn2[i].onmouseover = function(){
-			btn1.className = "";
 			var btnIdx = this.getAttribute("btn-index"); 
 			for(var n=0; n<btn1.length; n++){
 				btn2[n].className = "";
@@ -180,7 +178,30 @@ function slideImg(pics,dots){
 			box2[btnIdx].className = "content-box floorShow";
 		}
 	}
-}
+
+	//购物车删除宝贝
+	var deleteBtn = byId("cart-content").getElementsByClassName("x"),
+		cartGoods = byId("cart-content").getElementsByClassName("cart-goods"),
+		num = byId("cart-content").getElementsByClassName("num"),
+		totalNum = byId("total-num"),
+		sum = byId("sum");
+	for(var i=0; i<cartGoods.length; i++){
+		deleteBtn[i].onclick = function(){
+			var bye = this.parentNode.parentNode;
+			// 获取购物车中被删除商品的数量
+			var ask = confirm("确定删除该宝贝吗？");
+			if (ask) {
+				var deletedNum = this.parentNode.getElementsByClassName("num")[0].innerHTML;
+				bye.parentNode.removeChild(bye);
+				// 总商品数 - 被删除商品的数量 = 当前商品数量
+				totalNum.innerHTML = totalNum.innerHTML - deletedNum;
+				sum.innerHTML = totalNum.innerHTML;
+			}
+		}
+	}
+
+	//问题二：想继续实现删除宝贝后，购物车的高度相应缩小（添加宝贝则变高）；因为设置了overflow-y:scroll，一时想不到怎么兼容效果，请问有什么思路？
+}		
 
 //切换图片
 function changeImg(pics,dots){
@@ -195,7 +216,6 @@ function changeImg(pics,dots){
 window.onload = function(){
 	var pics = byId("slide").getElementsByTagName("div"),
 		dots = byId("dots").getElementsByTagName("span");
-
 	showCart();
 	slideImg(pics,dots);
 }

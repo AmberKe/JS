@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/script-jq.js"></script>
 </head>
 <body>
 	<div class="container">	
@@ -60,7 +60,7 @@
 					<input type="text" class="searchBox" name="searchBox" placeholder=" 灵魂美食一元抢"><input type="button" class="button" name="button" value="搜索">
 				</div>
 				<div class="cart" id="cart">
-					<img src="素材/icon/26.png">&nbsp;&nbsp;购物车&nbsp;&nbsp;|&nbsp;&nbsp;<span>0</span>&nbsp;<img src="素材/icon/23.png">
+					<img src="素材/icon/26.png">&nbsp;&nbsp;购物车&nbsp;&nbsp;|&nbsp;&nbsp;<span id="total-num">18</span>&nbsp;<img src="素材/icon/23.png">
 				</div> 
 				<div class="cart-content" id="cart-content">
 					<div class="cart-title">最新加入的商品</div>
@@ -68,66 +68,66 @@
 						<div class="cart-goods">
 							<img src="素材/cart/1.png">
 							<div class="cart-infos">
-								<a>adidas 阿迪达斯 训练 男子</a><span>X</span><p>￥335 x 1</p>
+								<a>adidas 阿迪达斯 训练 男子</a><span class="x">X</span><p>￥335 x <span class="num">1</span></p>
 							</div>
 						</div>
 						<div class="cart-goods">
 							<img src="素材/cart/2.png">
 							<div class="cart-infos">
-								<a>玉兰油多效修护三部曲套装</a><span>X</span><p>￥199 x 2</p>
+								<a>玉兰油多效修护三部曲套装</a><span class="x">X</span><p>￥199 x <span class="num">2</span></p>
 							</div>
 						</div>
 						<div class="cart-goods">
 							<img src="素材/cart/3.png">
 							<div class="cart-infos">
-								<a>Apple iPhone 7(A1660)</a><span>X</span><p>￥6188 x 1</p>
+								<a>Apple iPhone 7(A1660)</a><span class="x">X</span><p>￥6188 x <span class="num">1</span></p>
 							</div>
 						</div>
 						<div class="cart-goods">
 							<img src="素材/cart/4.png">
 							<div class="cart-infos">
-								<a>飞利浦面条机 HR2356/31</a><span>X</span><p>￥659 x 4</p>
+								<a>飞利浦面条机 HR2356/31</a><span class="x">X</span><p>￥659 x <span class="num">4</span></p>
 							</div>
 						</div>
 						<div class="cart-goods">
 							<img src="素材/cart/5.png">
 							<div class="cart-infos">
-								<a>罗技G29 力反馈游戏方向</a><span>X</span><p>￥2999 x 1</p>
+								<a>罗技G29 力反馈游戏方向</a><span class="x">X</span><p>￥2999 x <span class="num">1</span></p>
 							</div>
 						</div>
 						<div class="cart-goods">
 							<img src="素材/cart/1.png">
 							<div class="cart-infos">
-								<a>adidas 阿迪达斯 训练 男子</a><span>X</span><p>￥335 x 1</p>
+								<a>adidas 阿迪达斯 训练 男子</a><span class="x">X</span><p>￥335 x <span class="num">1</span></p>
 							</div>
 						</div>
 						<div class="cart-goods">
 							<img src="素材/cart/2.png">
 							<div class="cart-infos">
-								<a>玉兰油多效修护三部曲套装</a><span>X</span><p>￥199 x 2</p>
+								<a>玉兰油多效修护三部曲套装</a><span class="x">X</span><p>￥199 x <span class="num">2</span></p>
 							</div>
 						</div>
 						<div class="cart-goods">
 							<img src="素材/cart/3.png">
 							<div class="cart-infos">
-								<a>Apple iPhone 7(A1660)</a><span>X</span><p>￥6188 x 1</p>
+								<a>Apple iPhone 7(A1660)</a><span class="x">X</span><p>￥6188 x <span class="num">1</span></p>
 							</div>
 						</div>
 						<div class="cart-goods">
 							<img src="素材/cart/4.png">
 							<div class="cart-infos">
-								<a>飞利浦面条机 HR2356/31</a><span>X</span><p>￥659 x 4</p>
+								<a>飞利浦面条机 HR2356/31</a><span class="x">X</span><p>￥659 x <span class="num">4</span></p>
 							</div>
 						</div>
 						<div class="cart-goods">
 							<img src="素材/cart/5.png">
 							<div class="cart-infos">
-								<a>罗技G29 力反馈游戏方向</a><span>X</span><p>￥2999 x 1</p>
+								<a>罗技G29 力反馈游戏方向</a><span class="x">X</span><p>￥2999 x <span class="num">1</span></p>
 							</div>
 						</div>
 					</div>
 					<div class="cart-total">
-						<span>共18件商品 共计￥0.00</span><input class="cart-button" type="button" name="button" value="去购物车">
+						<span>共<span id="sum">18</span>件商品 共计￥0.00</span><input class="cart-button" type="button" name="button" value="去购物车">
 					</div>
 				</div>
 			</div>	
@@ -148,7 +148,7 @@
 			<ul class="nav-bar">
 				<li><a href="#"><img src="素材/icon/13.png"></a>
 					<ul class="nav-items">
-						<li>会员</li>
+						<li class="nav-li">会员</li>
 					</ul>
 				</li>
 				<li><a href="#"><img src="素材/icon/14.png"></a>
@@ -1878,21 +1878,11 @@
 			</div>
 			<div class="banner-box" id="banner-box">
 				<div class="slide" id="slide">
-					<a href="#">
-						<div class="slide-pics slide-active pic1"></div>
-					</a>
-					<a href="#">
-						<div class="slide-pics pic2"></div>
-					</a>
-					<a href="#">
-						<div class="slide-pics pic3"></div>
-					</a>
-					<a href="#">
-						<div class="slide-pics pic4"></div>
-					</a>
-					<a href="#">
-						<div class="slide-pics pic5"></div>
-					</a>	
+					<div class="slide-pics slide-active pic1"></div>
+					<div class="slide-pics pic2"></div>
+					<div class="slide-pics pic3"></div>
+					<div class="slide-pics pic4"></div>
+					<div class="slide-pics pic5"></div>
 				</div>
 				<a href="javascript:void(0)" class="slide-button prev" id="prev"></a>
 			    <a href="javascript:void(0)" class="slide-button next" id="next"></a>

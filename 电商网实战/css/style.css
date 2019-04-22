@@ -24,11 +24,16 @@ img{
 	border: 0;
 	vertical-align: middle;
 }
+.container{
+	width: 100%;
+}
 .header{
 	width: 100%;
 	background: #f3f5f7;
 }
 /*top区域*/
+
+/*问题一：顶层菜单的文字和下拉箭头不是很水平，请问可以怎么写，img已经设置vertical-align：middle了*/
 .top{
 	width: 1100px;
 	height: 50px;
@@ -47,12 +52,12 @@ img{
 nav{
 	float: right;
 }
-nav .top-layer{ /*用css实现导航栏hover时出现边框，会导致元素宽高变化（屏幕闪动），请问这部分该怎么改？*/
+nav .top-layer{ 
 	float: left;
 	width: 100px;
 	margin-right: 8px;
-	border-left: 1px solid #f3f5f7;
-	border-right: 1px solid #f3f5f7;
+	border: 1px solid transparent;
+	border-bottom: none;
 }
 nav ul{
 	display: inline-block;
@@ -97,9 +102,9 @@ nav ul .sub-layer{
 	margin-left: -1px; /*确保子菜单与主菜单对齐*/
 }
 
-/*logo区域,logo在左，搜索框居中，购物车在右*/
+/*logo区域*/
 
-/*这一区域的样式想将div变为行内块元素，再设置div之间的margin，但给第二个div设置宽高后（总宽度仍小于父容器宽度），三个div就不在同一行了，为何？*/
+/*问题二：这一区域的原先思路是想将三个div变为行内块元素，再设置div之间的margin实现，但给第二个div设置宽高后（总宽度仍小于父容器宽度），三个div就不在同一行了，为何？*/
 .logoArea{
 	width: 1100px;
 	height: 100px;
@@ -127,9 +132,13 @@ nav ul .sub-layer{
 	height: 38px;
 	border: 1px solid #CCC;
 }
+.searchBox, .button{
+	display: inline-block;
+	vertical-align: middle; /*给搜索框和按钮设置vertical-align即可实现水平对齐*/
+}
 .search .button{
 	width: 80px;
-	height: 39px; /*这里给button高度设为40px时，看起来跟输入框没有水平对齐，该怎么调整呢？*/
+	height: 40px;
 	font-size: 14px;
 	color: #fff;
 	background: #000;
@@ -143,10 +152,11 @@ nav ul .sub-layer{
 	text-align: center;
 	padding: 10px 5px 10px 5px;
 	margin-right: 15px;
-	margin-top: -45px; /*搜索框使用绝对定位后脱离了文档流，购物车div紧跟在logo下方，右浮动后位置就掉在父元素下方了*/
+	margin-top: -45px; /*搜索框使用定位后脱离了文档流，购物车div紧跟在logo下方，右浮动后位置就掉在父元素右下方了，因此要设置margin-top*/
 	cursor: pointer;
 }
-/*购物车下拉框；这段的html结构感觉特别繁琐，但没想出来简洁的方案，请问该怎么写？*/
+/*购物车下拉框*/
+/*问题三：这段的html结构感觉特别繁琐，但没想出来简洁的方案，请问该怎么写？*/
 .cart-content{
 	position: absolute;
 	width: 275px;
@@ -163,12 +173,7 @@ nav ul .sub-layer{
 }
 /*.cart:hover ~ .cart-content{
 	display: block;
-}
-.cart:hover{
-	background: #fff;
-	color: red;
-}
-*/
+}*/
 .cart-title{
 	border-bottom: 1px solid #CCC;
 	padding: 10px;
@@ -197,6 +202,12 @@ nav ul .sub-layer{
 	display: inline-block;
 	width: 180px;
 	cursor: pointer;
+}
+.cart-infos span{
+	cursor: pointer;
+}
+.cart-infos span:hover{
+	color: red;
 }
 .cart-total{
 	padding: 8px;
@@ -259,7 +270,7 @@ nav ul .sub-layer{
 	background: #71777d;
 }
 .nav-items{
-	position: absolute; /*这里给元素设置z-index为何不起作用？如何将其显示在最上层呢？*/
+	position: absolute; /*问题四：这里给元素设置z-index为何不起作用？会被生活服务区域盖住，如何将其显示在最上层呢？*/
 	float: right;
 	top: 0;
 	right: 40px;
@@ -314,7 +325,7 @@ nav ul .sub-layer{
 	background: #fff;
 	color: red;
 }
-*//*全局设置了a:hover{color:red;}这里为什么不起作用需要重写呢？*/
+*//*问题五：全局设置了a:hover{color:red;}这里为什么不起作用需要重写呢？（功能已通过js实现，因此这里注释掉，但疑问仍在！）*/
 
 .main-item a{
 	display: inline-block;
@@ -327,7 +338,7 @@ nav ul .sub-layer{
 	position: absolute;
 	right: 10px;
 }
-/*鼠标滑过主菜单，主菜单和子菜单之间没有border是怎么做到的？*/
+/*问题六：鼠标滑过主菜单，主菜单和子菜单之间没有border是怎么做到的？*/
 /*子菜单*/
 .sub-menu .inner-box{
 	width: 653px;
@@ -447,6 +458,7 @@ nav ul .sub-layer{
 	position: absolute;
 	top: 0;
 	right: 0;
+	background: #fff;
 }
 .news{
 	width: 238px;
@@ -659,8 +671,14 @@ nav ul .sub-layer{
 	background: #f3f5f7;
 	font-size: 14px;
 	text-align: center;
-	padding: 20px;
 	line-height: 25px;
+}
+.footer a{
+	display: inline-block;
+	margin-top: 20px;
+}
+.footer p{
+	padding-bottom: 20px;
 }
 .footer a:hover{
 	color: #71777d;
